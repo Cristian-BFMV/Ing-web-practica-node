@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const { DATABASE_URI } = require('./config');
 
 mongoose
-  .connect('mongodb+srv://ingweb:ingweb@cluster0.7jtxs.mongodb.net/nodelab?retryWrites=true&w=majority')
+  .connect(DATABASE_URI)
   .then(() => {
     console.log('Database connected');
   })
